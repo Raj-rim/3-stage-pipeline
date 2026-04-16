@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" --include "../../../../pipeline.srcs/sources_1/imports/files" \
+"../../../../pipeline.srcs/sources_1/imports/files/IF_ID.v" \
+"../../../../pipeline.srcs/sources_1/imports/files/execute.v" \
+"../../../../pipeline.srcs/sources_1/imports/files/memory.v" \
+"../../../../pipeline.srcs/sources_1/imports/files/pipeline.v" \
+"../../../../pipeline.srcs/sources_1/imports/files/wb.v" \
+"../../../../pipeline.srcs/sim_1/imports/files/tb_pipeline.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
